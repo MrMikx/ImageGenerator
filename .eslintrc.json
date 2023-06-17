@@ -1,0 +1,52 @@
+{
+  "root": true,
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:tailwindcss/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint/eslint-plugin", "tailwindcss"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/no-use-before-define": "warn",
+        "@typescript-eslint/no-var-requires": "warn",
+        "@typescript-eslint/no-non-null-assertion": "warn",
+        "@typescript-eslint/no-namespace": "warn",
+        "@typescript-eslint/no-require-imports": "warn",
+        "@typescript-eslint/no-unused-expressions": "warn",
+        "@typescript-eslint/no-shadow": "warn"
+      }
+    }
+  ],
+  "rules": {
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/classnames-order": "error",
+    "no-return-await": "error",
+    "prettier/prettier": "warn",
+    "max-len": [
+      "warn",
+      {
+        "code": 115,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreComments": true
+      }
+    ],
+    "comma-dangle": "off",
+    "no-unused-private-class-members": "warn",
+    "arrow-body-style": ["warn", "as-needed"]
+  }
+}
